@@ -1,0 +1,71 @@
+﻿@model IEnumerable<NoteSoft.NoteModel>
+
+@{
+    ViewBag.Title = "GetNoteByUserId";
+}
+
+<h2>Your actives notes</h2>
+
+<p>
+    @Html.ActionLink("Create Note", "AddNoteForm", "Note", new {  @class = "btn btn-success", @role = "button", @type = "button" })
+</p>
+@ViewBag.Message
+
+<div class="container">
+    <form class="form-signin" action="../Note/EditNote" method="post">
+
+        @foreach (var item in Model)
+        {
+            <div class="row-fluid">
+                <div class="col-md-3" style="min-height : 15%; width : 25%; max-height : 15%">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+
+                            <h3 class="panel-title" style="display:inline"> @Html.TextBoxFor(modelItem => item.Header, new { id = "Header" + @item.Id, @class = "form-control", @readonly = "true", @style = "border:0;", @type = "text", @maxlenght = "50" })</h3>
+
+
+                        </div>
+                        <div class="panel-body">
+                            @Html.TextAreaFor(modelItem => item.Body, new { id = "Body" + @item.Id , @class = "form-control", @style = "border:0;", @readonly = "true", @required = "true", @type = "text", @maxlenght = "500" })
+                        </div>
+                        <div class="panel-body">
+                            @Html.TextBoxFor(modelItem => item.Reminder, new { id = "Reminder" + @item.Id , @class = "form-control", @type = "date", @readonly = "true", @style = "border:0;" })
+                        </div>
+
+                        <div class="panel-footer">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Note Actions <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><input type="radio" id="AllowRadio" aria-label="..." onclick='allow(@item.Id)'>Chek here to allow Edit</li>
+
+
+                                    <li>@Html.ActionLink("Edit Note", "EditNote", "Note", new { id = item.Id, @class = "btn btn-success", @role = "button", @type = "button" })</li>
+
+                                    <li>@Html.ActionLink("Delete Note", "DeleteNote", "Note", new { id = item.Id, @class = "btn btn-danger", @role = "button", @type = "button" })</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+        }
+        <script language='javascript' type='text/javascript'>
+            function allow(id) 
+            {
+                
+                document.getElementById("Header" + id).removeAttribute("readonly", false)
+                document.getElementById("Body" + id).removeAttribute("readonly", false)
+                document.getElementById("Reminder" + id).removeAttribute("readonly", false)
+                
+            }
+        </script>
+    </form>
+        </div>
+
+    
+

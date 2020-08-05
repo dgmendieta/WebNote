@@ -1,0 +1,28 @@
+c:\users\sebastian.caggiano\documents\visual studio 2015\Projects\DataAccess\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+c:\users\sebastian.caggiano\documents\visual studio 2015\Projects\DataAccess\DataAccess\bin\Debug\DataAccess.dll
+c:\users\sebastian.caggiano\documents\visual studio 2015\Projects\DataAccess\DataAccess\bin\Debug\DataAccess.pdb
+c:\users\sebastian.caggiano\documents\visual studio 2015\Projects\DataAccess\DataAccess\obj\Debug\DataAccess.dll
+c:\users\sebastian.caggiano\documents\visual studio 2015\Projects\DataAccess\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Sebastian Caggiano\Documents\SistemaPersona\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Sebastian Caggiano\Documents\SistemaPersona\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Sebastian Caggiano\Documents\SistemaPersona\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Sebastian Caggiano\Documents\SistemaPersona\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Sebastian Caggiano\Documents\SistemaPersona\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\tanat\Desktop\Primera entrega formal Grupo 64 Equipo 1\Primera entrega formal Grupo 64 Equipo 1\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\tanat\Desktop\Primera entrega formal Grupo 64 Equipo 1\Primera entrega formal Grupo 64 Equipo 1\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\tanat\Desktop\Primera entrega formal Grupo 64 Equipo 1\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\tanat\Desktop\Primera entrega formal Grupo 64 Equipo 1\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\tanat\Desktop\Primera entrega formal Grupo 64 Equipo 1\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\tanat\Desktop\Primera entrega formal Grupo 64 Equipo 1\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\tanat\Desktop\Notesoft con userDB\Primera entrega formal Grupo 64 Equipo 1\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\tanat\Desktop\Notesoft con userDB\Primera entrega formal Grupo 64 Equipo 1\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\tanat\Desktop\Notesoft con userDB\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\tanat\Desktop\Notesoft con userDB\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\tanat\Desktop\Notesoft con userDB\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\tanat\Desktop\Notesoft con userDB\Primera entrega formal Grupo 64 Equipo 1\DataAccess\obj\Debug\DataAccess.pdb
+E:\Documents\WebNote\DataAccess\bin\Debug\DataAccess.dll
+E:\Documents\WebNote\DataAccess\bin\Debug\DataAccess.pdb
+E:\Documents\WebNote\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\Documents\WebNote\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Documents\WebNote\DataAccess\obj\Debug\DataAccess.dll
+E:\Documents\WebNote\DataAccess\obj\Debug\DataAccess.pdb

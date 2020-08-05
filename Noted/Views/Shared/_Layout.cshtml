@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    @if (Session["UserId"] != null && Convert.ToInt32(Session["UserId"]) != 0) {
+        string name = Session["UserName"].ToString();
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Noted", "Index", "Login", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Actives Notes", "GetNoteByUserId", "Note")</li>
+                    <li>@Html.ActionLink("Add Note", "AddNoteForm", "Note")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("User Data", "EditUser", "User")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add Note<span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <div class="col-md-12">
+                                <form class="form-signin" action="../Note/AddNote" method="post">
+                                    <h3 class="form-signin-heading">Add Note Here</h3>
+                                    @ViewBag.Message
+                                    <div class="form-group">
+                                        <label for="inputHeader">Header</label>
+                                        @Html.TextBox("HeaderTxt", null, new { @class = "form-control", @placeholder = "Note Title", @required = "true", @autofocus = "true", @maxlenght = "50", @width = "80%" })
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputBody">Body</label>
+                                        @Html.TextArea("BodyTxt", null, new { @class = "form-control", @placeholder = "Note Content", @required = "true", @maxlenght = "500" })
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDate">Set Reminder</label>
+                                        @Html.TextBox("ReminderTxt", null, new { @class = "form-control", @placeholder = "Reminder Date", @type = "date" })
+
+                                    </div>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button class="btn btn-lg btn-danger" type="reset">Cancel</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Add Note</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    }
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - WebNote - J.A.P. - Grupo 64 - Equipo 1 </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

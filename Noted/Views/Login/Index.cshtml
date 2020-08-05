@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Please Login</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form class="form-signin" action="../Login/Logged" method="post">
+                <h3 class="form-signin-heading">Enter your Login data</h3>
+                <span class="label label-warning">@ViewBag.Message</span><br />
+
+                <label for="inputEmail">Email address</label>
+                @Html.TextBox("UserTxt", null, new { @class = "form-control", @placeholder = "Email Address", @required = "true", @autofocus = "true", @type = "email", @maxlenght = "50" })
+
+                <label for="inputPassword">Password</label>
+                @Html.TextBox("PasswordTxt", null, new { @class = "form-control", @placeholder = "Password", @required = "true", @type = "password", @maxlenght = "50" })
+                <div class="row">
+                    <div class="btn-group">
+                        <button class="btn btn-lg btn-primary active" type="submit">Sign In</button>
+                        @Html.ActionLink("Sign Up", "NewUser", "User", new { @type = "button", @role = "button", @class = "btn btn-lg btn-success" })
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.ActionLink("Forgot your password?", "NewPass", "User", new { @type = "button", @role = "button", @class = "btn btn-lg btn-info" })
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+

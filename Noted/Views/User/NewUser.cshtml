@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "NewUser";
+}
+
+<h2>New User</h2>
+
+<div class="container">
+    <div class="row">
+        <form class="form-signin" action="../User/SaveUser" method="post">
+            <h3 class="form-signin-heading">Please Register</h3>
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                @Html.TextBox("NameTxt", null, new { @class = "form-control", @placeholder = "Your name", @required = "true", @autofocus = "true", @maxlenght = "50" })
+            </div>
+            <div class="form-group">
+                <label for="inputLastName">Last Name</label>
+                @Html.TextBox("LastNameTxt", null, new { @class = "form-control", @placeholder = "Your Last Name", @required = "true", @maxlenght = "50" })
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">User Name (Email Address)</label>
+                @Html.TextBox("EmailTxt", null, new { @class = "form-control", @placeholder = "Your Email Address", @type = "email", @required = "true", @maxlenght = "50" })
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                @Html.TextBox("PasswordTxt", null, new { @class = "form-control", @placeholder = "Your Password", @type = "password", @required = "true", @maxlenght = "50" })
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Confirm Password</label>
+                @Html.TextBox("PasswordTxtCheck", null, new { @class = "form-control", @placeholder = "Your Password Again", @type = "password", @oninput = "check(this)", @required = "true", @maxlenght = "50" })
+            </div>
+            <script language='javascript' type='text/javascript'>
+                function check(input) {
+                    if (input.value != document.getElementById('PasswordTxt').value) {
+                            input.setCustomValidity('Password Must be Matching.');
+                        } else {
+                                  input.setCustomValidity('');
+                               }
+                        }
+            </script>
+
+            <div class="form-group">
+                <label for="inputPhone">Cellphone</label>
+                @Html.TextBox("PhoneTxt", null, new { @class = "form-control", @placeholder = "Your Cellphone Number", @type = "tel", @maxlenght = "50" })
+            </div>
+            <div class="btn-group btn-group-lg" role="group">
+                <button class="btn btn-lg btn-danger" type="reset">Cancel</button>
+                <button class="btn btn-lg btn-success" type="submit">Register</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
